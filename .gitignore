@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if tooling is ever added)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs & temp
+*.log
+.cache/
+dist/
+tmp/

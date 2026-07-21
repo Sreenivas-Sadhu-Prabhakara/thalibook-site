@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ThaliBook — catering quotes & auto ingredient shopping lists</title>
+  <meta name="description" content="Quote events by the plate, take an advance, and get an ingredient shopping list generated automatically from your menu. Built for Indian caterers and event cooks — book a discovery call." />
+  <meta name="keywords" content="catering software India, caterer order book, per-plate quote, event catering app, ingredient shopping list, catering menu costing, wedding catering management" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/" />
+  <meta name="theme-color" content="#ea580c" />
+  <meta name="author" content="KARYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KARYA" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="ThaliBook — catering quotes & auto ingredient shopping lists" />
+  <meta property="og:description" content="Quote events by the plate, take an advance, and get an ingredient shopping list generated automatically from your menu. Built for Indian caterers and event cooks — book a discovery call." />
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/" />
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ThaliBook — event quote by the plate, take an advance, and the ingredient shopping list writes itself for Indian caterers." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ThaliBook — catering quotes & auto ingredient shopping lists" />
+  <meta name="twitter:description" content="Quote events by the plate, take an advance, and get an ingredient shopping list generated automatically from your menu. Built for Indian caterers and event cooks — book a discovery call." />
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/og.png" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/og.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kaarya-bench.pages.dev/#org",
+        "name": "KARYA",
+        "url": "https://kaarya-bench.pages.dev/",
+        "email": "sreeni.nintendo@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/#website",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/",
+        "name": "ThaliBook",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://kaarya-bench.pages.dev/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ThaliBook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/",
+        "image": "https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/og.png",
+        "description": "An order book for Indian caterers and event cooks — quote events by the plate (headcount × per-plate rate), take an advance to lock the date, and auto-generate an ingredient shopping list computed from the menu as Σ(per-plate ingredient qty × headcount), plus an events calendar and a consolidated this-week market run.",
+        "inLanguage": ["en-IN", "hi-IN"],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "audience": { "@type": "BusinessAudience" },
+        "provider": { "@type": "Organization", "name": "KARYA" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "description": "Subscription — pricing shared on a discovery call"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where does the shopping list come from?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "From your menu. Every dish in ThaliBook's built-in recipe book carries per-plate ingredient quantities. When you book an event, ThaliBook multiplies each ingredient by the headcount and sums it across all the dishes on the menu, then rolls grams up to kilos and millilitres to litres — so the market list is exact, not a guess."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My dishes and portions are my own. Can I change the recipes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The recipe book ships with common Indian dishes and sensible per-plate quantities to get you moving, but the per-plate amounts are yours to tune. Adjust a dish once and every future event that uses it gets the corrected shopping list automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to take the advance through the app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Take the advance however you already do — cash, UPI, bank transfer — and record the amount in ThaliBook. Recording it is what confirms the booking, generates the shopping list, and starts tracking the balance due. ThaliBook doesn't force a payment rail on you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I run several events in a week. Do I shop for each one separately?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — that's the point of the this-week list. ThaliBook consolidates every booked event in the next seven days into one combined market run, so you buy 14 kg of onions once instead of chasing it event by event."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I'm not very techy. How long to set up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An afternoon. The recipe book is already loaded, so you just add an event, pick dishes, and enter the advance. The demo opens with a full board of Bengaluru catering events already computed, so you can see exactly how it works before you type a thing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first caterers."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "KARYA · On the Bench",
+            "item": "https://kaarya-bench.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ThaliBook",
+            "item": "https://sreenivas-sadhu-prabhakara.github.io/thalibook-site/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="ThaliBook home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="ThaliBook logo">
+            <circle cx="16" cy="16" r="13" fill="#ea580c"/>
+            <circle cx="16" cy="16" r="13" fill="none" stroke="#9a3412" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="4.4" fill="#FFF7ED"/>
+            <circle cx="16" cy="8.4" r="2.1" fill="#FFF7ED"/>
+            <circle cx="23.6" cy="13.6" r="2.1" fill="#FFF7ED"/>
+            <circle cx="20.7" cy="22.6" r="2.1" fill="#FFF7ED"/>
+            <circle cx="11.3" cy="22.6" r="2.1" fill="#FFF7ED"/>
+            <circle cx="8.4" cy="13.6" r="2.1" fill="#FFF7ED"/>
+          </svg>
+        </span>
+        <span class="brand__name">Thali<span class="brand__book">Book</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20ThaliBook" class="btn btn--sm">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">An order book for caterers</p>
+          <h1 class="hero__title" id="hero-title">The market list<br /><span class="accent-word">writes itself.</span></h1>
+          <p class="hero__pain">
+            Quote the event by the plate, take the advance to lock the date — then
+            work out how much of everything to buy. ThaliBook turns the menu into
+            an exact ingredient shopping list the moment you book: headcount ×
+            per-plate qty, summed across every dish.
+          </p>
+          <div class="hero__cta">
+            <a href="#how" class="btn btn--lg">See a booking generate its list &rarr;</a>
+            <a href="#pricing" class="btn-link">Book a discovery call</a>
+          </div>
+          <p class="hero__note"><span class="dot"></span>For caterers &amp; event cooks · quotes, advances &amp; auto market lists · pricing on discovery</p>
+        </div>
+
+        <!-- SIGNATURE WIDGET: quote → advance → shopping list -->
+        <aside class="register" aria-label="Live booking demo — quote to shopping list">
+          <div class="register__head">
+            <div>
+              <p class="register__label">Event</p>
+              <p class="register__month" id="reg-title">Sharma Family · Wedding</p>
+            </div>
+            <span class="register__pill" id="reg-status">Booked</span>
+          </div>
+
+          <div class="quotebar">
+            <div class="quotebar__cell">
+              <span class="quotebar__k">Headcount</span>
+              <span class="quotebar__v">250</span>
+            </div>
+            <span class="quotebar__x" aria-hidden="true">×</span>
+            <div class="quotebar__cell">
+              <span class="quotebar__k">Per plate</span>
+              <span class="quotebar__v">Rs 420</span>
+            </div>
+            <span class="quotebar__x" aria-hidden="true">=</span>
+            <div class="quotebar__cell quotebar__cell--out">
+              <span class="quotebar__k">Quote</span>
+              <span class="quotebar__v" id="reg-quote">Rs 1,05,000</span>
+            </div>
+          </div>
+
+          <p class="register__mini" id="reg-mini">Menu: Paneer Butter Masala · Chicken Biryani · Dal Tadka · Butter Naan · Gulab Jamun</p>
+
+          <ul class="register__rows" id="reg-rows">
+            <li class="reg-row">
+              <span class="reg-row__name">Onion</span>
+              <span class="reg-row__amt" id="li-1">18.5 kg</span>
+              <span class="reg-row__tag tag--due">to buy</span>
+            </li>
+            <li class="reg-row">
+              <span class="reg-row__name">Paneer</span>
+              <span class="reg-row__amt" id="li-2">9.0 kg</span>
+              <span class="reg-row__tag tag--due">to buy</span>
+            </li>
+            <li class="reg-row">
+              <span class="reg-row__name">Basmati rice</span>
+              <span class="reg-row__amt" id="li-3">21.0 kg</span>
+              <span class="reg-row__tag tag--due">to buy</span>
+            </li>
+          </ul>
+          <div class="register__foot">
+            <div class="regstat">
+              <span class="regstat__label">Advance in</span>
+              <span class="regstat__val regstat__val--in" id="reg-advance">Rs 30,000</span>
+            </div>
+            <div class="regstat">
+              <span class="regstat__label">Balance due</span>
+              <span class="regstat__val regstat__val--out" id="reg-balance">Rs 75,000</span>
+            </div>
+          </div>
+          <p class="register__caption" id="reg-caption">Advance recorded → the ingredient shopping list generates itself.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem" aria-label="The problem">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">01 · The problem</p>
+        <div class="two-col">
+          <h2 class="section__title">You cook for 300.<br />The maths cooks you.</h2>
+          <div class="prose">
+            <p>
+              A caterer's real job starts after the "yes". You quoted by the plate,
+              took the advance — now you're on the floor with a calculator working out
+              <strong>how much paneer, how many kilos of rice, how much oil</strong>
+              for this headcount, this menu. Every event, from scratch, by hand.
+            </p>
+          </div>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🧮</span>
+            <h3>The shopping list is redone every time</h3>
+            <p>Same dishes, new headcount — so you re-multiply every ingredient by hand. Miss a dish and you're back at the market at 6am on function day.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">📒</span>
+            <h3>Quotes live on scraps of paper</h3>
+            <p>Headcount, per-plate rate, which advance came in for which event — spread across a diary, WhatsApp and your head. Nothing adds up in one place.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🗓️</span>
+            <h3>Two functions in one week = double the chaos</h3>
+            <p>Shopping for a wedding and a griha pravesh separately means two market runs and two chances to over-buy onions you already had.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">💸</span>
+            <h3>Balances slip after the advance lands</h3>
+            <p>The advance came in, the event happened — and the balance follow-up quietly never went out. Money left on the table, every season.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHT ============ -->
+    <section class="insight" id="insight" aria-label="The insight">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--light">02 · The insight</p>
+        <blockquote class="insight__quote">
+          A catering quote is just <span class="hl">headcount × per-plate</span>,
+          and the shopping list is <span class="hl">fully determined</span> by the
+          menu and the headcount — yet both get re-calculated by hand for every
+          single event.
+        </blockquote>
+        <p class="insight__punch">
+          ThaliBook's whole job is to close that gap: put the per-plate quantities
+          in a recipe book <strong>once</strong>, and let every booking compute its
+          own market list — <strong>Σ(per-plate qty × headcount)</strong> across the
+          menu — so the buying is exact, and a busy week rolls up into one run.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-label="How it works">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">03 · How it works</p>
+        <h2 class="section__title">Quote, book, buy. The list is a by-product.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <div>
+              <h3>Create the event and quote it</h3>
+              <p>Client, date, event type, headcount and a per-plate rate. The quote — headcount × per-plate — is shown live as you type. No calculator.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <div>
+              <h3>Build the menu from the recipe book</h3>
+              <p>Pick dishes — paneer butter masala, chicken biryani, dal tadka, veg pulao, chole, naan, gulab jamun. Each already carries its per-plate quantities.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <div>
+              <h3>Take the advance — the list generates</h3>
+              <p>Record the advance and the event is booked. ThaliBook computes the ingredient shopping list automatically: every dish × headcount, summed and rolled into kilos and litres.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">4</span>
+            <div>
+              <h3>Shop the week, chase the balance</h3>
+              <p>A calendar of upcoming events, a consolidated this-week market list across every booking, and a one-tap balance reminder. Nothing falls through.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section--tint" id="features" aria-label="What's inside">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">04 · What's inside</p>
+        <h2 class="section__title">The whole event, from enquiry to market run.</h2>
+
+        <div class="feat-grid">
+          <article class="feat">
+            <h3>Per-plate quoting</h3>
+            <p>Headcount × per-plate, computed live. Move an event from enquiry to quoted to booked without a single manual sum.</p>
+          </article>
+          <article class="feat">
+            <h3>Built-in recipe book</h3>
+            <p>Common Indian dishes come loaded with per-plate ingredient quantities. Tune a portion once and every future event inherits it.</p>
+          </article>
+          <article class="feat">
+            <h3>Auto ingredient shopping list</h3>
+            <p>On booking, Σ(per-plate qty × headcount) across the menu — summed per ingredient, grams rolled to kilos, millilitres to litres.</p>
+          </article>
+          <article class="feat">
+            <h3>Advance &amp; balance tracking</h3>
+            <p>Record the advance, book the date, and carry the balance due on every event. A tap fires the balance reminder to the client.</p>
+          </article>
+          <article class="feat">
+            <h3>This-week consolidated list</h3>
+            <p>Every booked event in the next seven days summed into one market run — buy the onions once, not event by event.</p>
+          </article>
+          <article class="feat">
+            <h3>Events calendar &amp; dashboard</h3>
+            <p>Upcoming functions, booked value, advance in hand and balance due — the whole book in one glance, ready for the season.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT PREVIEW ============ -->
+    <section class="section" id="preview" aria-label="The dashboard">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">05 · The dashboard</p>
+        <h2 class="section__title">Open it Monday. See the whole week's cooking and buying.</h2>
+
+        <div class="screen" role="img" aria-label="ThaliBook dashboard preview showing booked value 3,26,000 rupees, advance in hand 96,000 rupees, and this week's consolidated shopping list, with an events table of four upcoming catering events.">
+          <!-- browser chrome -->
+          <div class="screen__bar">
+            <span class="screen__dot"></span><span class="screen__dot"></span><span class="screen__dot"></span>
+            <span class="screen__url">app.thalibook.in / Annapoorna Caterers</span>
+          </div>
+
+          <div class="screen__body">
+            <div class="screen__topline">
+              <div>
+                <p class="screen__hello">Namaste, Lakshmi ji</p>
+                <p class="screen__sub">Annapoorna Caterers · Bengaluru · week of 19 Jul 2026</p>
+              </div>
+              <span class="screen__tag">4 events booked</span>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpis">
+              <div class="kpi kpi--in">
+                <p class="kpi__label">Booked value</p>
+                <p class="kpi__val">Rs 3,26,000</p>
+                <div class="kpi__bar"><span style="width:70%"></span></div>
+                <p class="kpi__meta">4 booked · 2 in enquiry</p>
+              </div>
+              <div class="kpi kpi--out">
+                <p class="kpi__label">Balance due</p>
+                <p class="kpi__val">Rs 2,30,000</p>
+                <div class="kpi__bar kpi__bar--out"><span style="width:70%"></span></div>
+                <p class="kpi__meta">Rs 96,000 advance in hand</p>
+              </div>
+              <div class="kpi kpi--flat">
+                <p class="kpi__label">This week's headcount</p>
+                <p class="kpi__val">790</p>
+                <p class="kpi__meta">plates to cook across 4 events</p>
+              </div>
+            </div>
+
+            <!-- events table -->
+            <div class="tablecard">
+              <div class="tablecard__head">
+                <p>Upcoming events</p>
+                <span class="tablecard__hint">shopping list auto-generated on booking</span>
+              </div>
+              <div class="tablescroll">
+                <table class="dtable">
+                  <thead>
+                    <tr>
+                      <th>Client</th><th>Type</th><th class="num">Heads</th><th class="num">Quote</th><th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sharma Family</td><td>Wedding</td>
+                      <td class="num">250</td><td class="num">1,05,000</td>
+                      <td><span class="s s--paid">Booked · list ready</span></td>
+                    </tr>
+                    <tr>
+                      <td>Infobyte Solutions</td><td>Corporate lunch</td>
+                      <td class="num">180</td><td class="num">54,000</td>
+                      <td><span class="s s--paid">Booked · list ready</span></td>
+                    </tr>
+                    <tr>
+                      <td>Vinod Gowda</td><td>Griha pravesh</td>
+                      <td class="num">120</td><td class="num">42,000</td>
+                      <td><span class="s s--due">Quoted</span></td>
+                    </tr>
+                    <tr>
+                      <td>Fernandes Wedding</td><td>Reception</td>
+                      <td class="num">240</td><td class="num">1,25,000</td>
+                      <td><span class="s s--over">Enquiry</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--tint" id="pricing" aria-label="Pricing">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">06 · Pricing</p>
+        <div class="price-wrap">
+          <div class="price-copy">
+            <h2 class="section__title">Priced on a call. However many functions you run.</h2>
+            <p class="prose">
+              If ThaliBook stops <strong>one over-buy</strong> or catches
+              <strong>one forgotten balance</strong> a month, it has already paid for
+              itself — and you've bought back the hours you spend re-doing the market
+              list before every function.
+            </p>
+            <ul class="price-includes">
+              <li>Unlimited events &amp; menus</li>
+              <li>Per-plate quoting + built-in recipe book</li>
+              <li>Auto ingredient shopping list on booking</li>
+              <li>This-week consolidated list, calendar &amp; balance reminders</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <p class="price-card__eyebrow">ThaliBook</p>
+            <p class="price-card__amt" style="font-size:34px;">Pricing — on discovery</p>
+            <p class="price-card__line">Subscription basis</p>
+            <p class="prose" style="color:color-mix(in srgb, var(--paper) 82%, transparent);margin:0 0 22px;">
+              We set pricing on a short discovery call and bill it as a simple monthly
+              subscription — sized to how many events you run. Early caterers get
+              founder terms.
+            </p>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20ThaliBook" class="btn btn--lg btn--block">Book a discovery call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO + FAQ ============ -->
+    <section class="section" id="faq" aria-label="Who it's for and frequently asked questions">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">07 · Who it's for &amp; questions</p>
+        <div class="who-grid">
+          <div class="who">
+            <h2 class="section__title section__title--sm">Built for the working caterer, not a hotel chain.</h2>
+            <p class="prose">
+              ThaliBook is for the <strong>caterer or event cook</strong> who runs
+              weddings, receptions, corporate lunches and house functions off a
+              WhatsApp thread and a diary — quoting by the plate, buying by hand,
+              and holding the whole season in their head. Big enough that the maths
+              hurts; small enough that a restaurant ERP is overkill.
+            </p>
+            <div class="who-tags">
+              <span>Caterers</span>
+              <span>Event &amp; tiffin cooks</span>
+              <span>Wedding &amp; function caterers</span>
+              <span>Corporate lunch kitchens</span>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>Where does the shopping list come from?</summary>
+              <p>From your menu. Every dish in ThaliBook's built-in recipe book carries per-plate ingredient quantities. When you book an event, ThaliBook multiplies each ingredient by the headcount and sums it across all the dishes, then rolls grams up to kilos and millilitres to litres — so the market list is exact, not a guess.</p>
+            </details>
+            <details>
+              <summary>My dishes and portions are my own. Can I change the recipes?</summary>
+              <p>Yes. The recipe book ships with common Indian dishes and sensible per-plate quantities to get you moving, but the per-plate amounts are yours to tune. Adjust a dish once and every future event that uses it gets the corrected shopping list automatically.</p>
+            </details>
+            <details>
+              <summary>Do I have to take the advance through the app?</summary>
+              <p>No. Take the advance however you already do — cash, UPI, bank transfer — and record the amount in ThaliBook. Recording it is what confirms the booking, generates the shopping list, and starts tracking the balance due. ThaliBook doesn't force a payment rail on you.</p>
+            </details>
+            <details>
+              <summary>I run several events in a week. Do I shop for each one separately?</summary>
+              <p>No — that's the point of the this-week list. ThaliBook consolidates every booked event in the next seven days into one combined market run, so you buy 14 kg of onions once instead of chasing it event by event.</p>
+            </details>
+            <details>
+              <summary>I'm not very techy. How long to set up?</summary>
+              <p>An afternoon. The recipe book is already loaded, so you just add an event, pick dishes, and enter the advance. The demo opens with a full board of Bengaluru catering events already computed, so you can see exactly how it works before you type a thing.</p>
+            </details>
+            <details>
+              <summary>What does it cost?</summary>
+              <p>Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first caterers.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="ThaliBook logo">
+              <circle cx="16" cy="16" r="13" fill="#ea580c"/>
+              <circle cx="16" cy="16" r="13" fill="none" stroke="#9a3412" stroke-width="1.5"/>
+              <circle cx="16" cy="16" r="4.4" fill="#FFF7ED"/>
+              <circle cx="16" cy="8.4" r="2.1" fill="#FFF7ED"/>
+              <circle cx="23.6" cy="13.6" r="2.1" fill="#FFF7ED"/>
+              <circle cx="20.7" cy="22.6" r="2.1" fill="#FFF7ED"/>
+              <circle cx="11.3" cy="22.6" r="2.1" fill="#FFF7ED"/>
+              <circle cx="8.4" cy="13.6" r="2.1" fill="#FFF7ED"/>
+            </svg>
+          </span>
+          <span class="brand__name">Thali<span class="brand__book">Book</span></span>
+        </span>
+        <p class="footer__tag">The market list writes itself.</p>
+      </div>
+      <div class="footer__meta">
+        <p class="footer__studio">A <strong>KARYA</strong> studio build</p>
+        <a class="footer__mail" href="mailto:sreeni.nintendo@gmail.com">sreeni.nintendo@gmail.com</a>
+        <p class="footer__fine">© 2026 ThaliBook · Made in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
